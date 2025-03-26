@@ -44,7 +44,7 @@ Follow the steps below to get the project running locally:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/web_scraper_demo.git
+git clone https://github.com/toolboxcloudservices/web_scraper_demo_project.git
 cd web_scraper_demo
 ```
 
