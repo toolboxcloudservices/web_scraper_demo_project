@@ -28,8 +28,8 @@ To run the frontend locally, follow the steps below:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/web-scraper-frontend.git
-cd web-scraper-frontend
+git clone https://github.com/toolboxcloudservices/web_scraper_demo_project.git
+cd front_end
 ```
 
 ### 2. Install dependencies
