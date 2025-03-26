@@ -11,7 +11,7 @@ const Screenshots = ({ screenshots }) => {
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "16px" }}>
                 {Object.entries(screenshots).map(([step, url]) => (
                     <div key={step} style={{ border: "1px solid #ddd", padding: "8px", borderRadius: "6px" }}>
-                        <Image width="100%" src={`http://localhost:5000/api/${url}`} alt={`Screenshot - ${step}`} />
+                        <Image width="100%" src={`http://localhost:5000/screenshot/${url}`} alt={`Screenshot - ${step}`} />
                     </div>
                 ))}
             </div>

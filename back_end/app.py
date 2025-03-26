@@ -13,7 +13,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from chromedriver_py import binary_path
 from flask import Flask, request, send_from_directory, Response, send_file, jsonify
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 from config import SCREENSHOT_DIR
 
 app = Flask(__name__)
@@ -418,25 +418,33 @@ def index():
 
 
 # Route to provide real-time log streaming
-from flask_cors import cross_origin
+@app.route('api/logs')
+@cross_origin
+def logs():
+    """
+    Streams real-time log updates to the client.
 
-@app.route('/api/logs')
-@cross_origin()  # Call cross_origin() as a function
-def stream_logs():
+    This endpoint allows the frontend to receive live updates from the log stream.
+    It continuously checks for new log content and sends it as a Server-Sent Event (SSE).
+
+    Returns:
+        Server-Sent Event (SSE) response containing real-time log data.
+    """
     def generate():
-        log_stream.seek(0)
+        log_stream.seek(0)  # Move to the beginning of the log stream
         while True:
-            time.sleep(1)
-            log_content = log_stream.getvalue()
-            log_stream.truncate(0)
+            time.sleep(1)  # Wait for new log updates
+            log_content = log_stream.getvalue()  # Retrieve current log content
+            log_stream.truncate(0)  # Clear log stream after sending
             log_stream.seek(0)
 
             if log_content:
-                yield f"data:{log_content}\n\n"
+                yield f"data:{log_content}\n\n"  # Send log data as SSE
             else:
-                yield ": keep-alive\n\n"
+                yield ": keep-alive\n\n"  # Send keep-alive message if no new logs
 
     return Response(generate(), mimetype='text/event-stream')
+
 
 
 # Route to allow downloading of generated reports
