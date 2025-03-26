@@ -13,8 +13,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from chromedriver_py import binary_path
 from flask import Flask, request, send_from_directory, Response, send_file, jsonify
-from flask_cors import CORS, cross_origin
-
+from flask_cors import CORS
 from config import SCREENSHOT_DIR
 
 app = Flask(__name__)

@@ -1,6 +1,0 @@
-{
-  "env": {
-    "FLASK_ENV": "production",
-    "SECRET_KEY": "@vercel/secret"
-  }
-}

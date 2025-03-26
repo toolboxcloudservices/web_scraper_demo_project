@@ -77,8 +77,10 @@ src/
   assets/                  # Static assets like images and icons
   components/              # Reusable components (Form, Logs, Screenshots)
   pages/                   # Individual pages (e.g. Home, Scraper)
-  App.js                   # Main app component
-  index.js                 # Entry point of the app
+  App.jsx                  # Main app component
+  App.css                  # Main styling component
+  index.css                # styling component 
+  main.jsx                 # Entry point of the app
 public/
   index.html               # Main HTML template
   logo.png                 # App logo

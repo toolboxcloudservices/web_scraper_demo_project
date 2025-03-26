@@ -1,4 +1,4 @@
-# IT Department Scraping API
+# Web Scraper Backend API
 
 This project is a backend service that scrapes IT department contact information from provided URLs. It uses Selenium for dynamic page rendering and BeautifulSoup for extracting data. The extracted information is returned as structured JSON data, and you can also download it as an Excel report. Screenshots of the page steps are also provided.
 
@@ -44,7 +44,7 @@ Make sure you have the following installed:
 - **Request Body**: 
     ```json
     {
-        "url": "https://www.chatham-ma.gov.com"
+        "url": "https://example.com"
     }
     ```
 - **Response**: 

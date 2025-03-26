@@ -47,7 +47,7 @@ function WelcomePage() {
                             <Row gutter={16} justify="center" style={{marginTop: '20px'}}>
                                 {/* GitHub Button with Icon */}
                                 <Col>
-                                    <a href="https://github.com/toolboxcloudservices" target="_blank"
+                                    <a href="https://github.com/toolboxcloudservices/web_scraper_demo_project" target="_blank"
                                        rel="noopener noreferrer">
                                         <Button
                                             type="default"
