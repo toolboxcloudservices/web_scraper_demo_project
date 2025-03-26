@@ -19,8 +19,8 @@ Make sure you have the following installed:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-repository.git
-    cd your-repository
+    git clone https://github.com/toolboxcloudservices/web_scraper_demo_project.git
+    cd back_end
     ```
 
 2. Install dependencies:
@@ -44,7 +44,7 @@ Make sure you have the following installed:
 - **Request Body**: 
     ```json
     {
-        "url": "https://example.com"
+        "url": "https://www.chatham-ma.gov.com"
     }
     ```
 - **Response**: 
